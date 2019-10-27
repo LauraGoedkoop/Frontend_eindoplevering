@@ -1,0 +1,534 @@
+@font-face {
+  font-family: wonder;
+  src: url(../_font/wonder.ttf);
+}
+
+
+/* basis css */
+
+* {
+  outline: none;
+}
+
+body {
+  background-color: #0026cc;
+  margin: 0em;
+}
+
+header {
+  background-color: #0026cc;
+  box-shadow: inset 0 -16px 12px -10px rgba(0, 0, 0, .85);
+  width: 100%;
+  overflow: hidden;
+  z-index: 999;
+}
+
+ul {
+  /* bron: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+}
+
+nav ul li a i {
+  margin-right: 1em;
+}
+
+
+nav ul li img {
+  width: 4vw;
+  height: auto;
+
+}
+
+.nav_detailpagina {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav_detailpagina li {
+  margin-left: 3vw;
+}
+
+li {
+  text-align: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-family: "wonder", sans-serif;
+  font-size: 8pt;
+}
+
+
+#column2 a {
+  color: white;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+
+#column2 a:hover {
+  background-color: #0026cc;
+}
+
+/* STATES */
+
+
+a:hover {
+  color: #73cd72;
+}
+
+a:focus {
+  border: 1px dotted #fff;
+  padding: 5px;
+}
+
+a:active {
+  color: darkgreen;
+}
+
+/* button states*/
+
+ul li button:hover {
+  color: #0026cc;
+}
+
+ul li button:focus {
+  border: 1px dotted #fff;
+  padding: 5px;
+}
+
+ul li button:active {
+  color: darkgreen;
+}
+
+
+#banner {
+  object-fit: cover;
+  width: 100vw;
+  height: 50vh;
+}
+
+main > video {
+  object-fit: cover;
+  max-height: 60vh;
+  width: 100%;
+  margin-bottom: -1vh;
+}
+
+#video2 {
+  margin-top: 5vh;
+}
+
+.categorie_balk {
+  background: #73cd72;
+  /* bron: https://css-tricks.com/almanac/properties/b/box-shadow/ */
+  box-shadow: inset 0 -16px 12px -10px rgba(0, 0, 0, .85);
+  display: flex;
+  justify-content: flex-start;
+  padding: 15px;
+  padding-left: 50px;
+  margin: 0;
+
+}
+
+.categorie_balk li {
+  margin-right: 2vw;
+  margin-left: 1vw;
+  color: white;
+  font-family: "wonder", sans-serif;
+  font-size: 8pt;
+}
+
+
+.categorie_balk li button {
+  text-decoration: none;
+  color: white;
+  background-color: #73cd72;
+  border: none;
+  font-family: "wonder", sans-serif;
+}
+
+
+/* bron: Max Hauser */
+#categorie_dropdown {
+  height: 0vh;
+  width: 80vw;
+  opacity: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  transition: 0.3s;
+  margin: 0 auto;
+  align-items: center;
+}
+
+
+#categorie_dropdown.show {
+  opacity: 1;
+  height: 10vh;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* bron: https://css-tricks.com/the-checkbox-hack/*/
+form input {
+  position: relative;
+  z-index: -1;
+  visibility: hidden;
+}
+
+form label {
+  visibility: visible;
+}
+
+form input:checked + label {
+  background: #000;
+}
+
+form input + label {
+  color: #fff;
+  padding: 0.3em;
+  font-family: "wonder";
+  font-size: 6pt;
+}
+
+h1 {
+  font-family: "wonder", sans-serif;
+  font-size: 22pt;
+  text-align: center;
+  color: white;
+
+}
+
+main section {
+  background-image: url(../_img/background-section.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 99;
+  width: 100vw;
+  top: 360px;
+
+
+}
+
+
+article img {
+  max-width: 100%;
+  margin-bottom: 3vh;
+  margin-left: -1.3vw
+}
+
+
+.icoon {
+  width: 8%;
+  margin-top: 3vh;
+}
+
+.icoon_muziek {
+  width: 8%;
+  margin-left: 2vh;
+}
+
+article p {
+  font-family: "wonder", sans-serif;
+  color: white;
+  font-size: 7pt;
+  margin-bottom: 3vh;
+  margin-top: 0;
+}
+
+article p a {
+  font-size: 7pt;
+  margin: 0;
+  color: #0026cc;
+}
+
+article p a:hover {
+  color: crimson;
+}
+
+#column {
+  /* bron: https://css-tricks.com/snippets/css/complete-guide-grid/ */
+  display: grid;
+  grid-template-columns: 1fr;
+
+}
+
+#column article {
+  background-color: #73cd72;
+  padding: 1em 4em;
+  margin: 2em 2em;
+  box-shadow: inset 0 0 13px 7px #000;
+
+}
+
+#column img:hover {
+  opacity: 0.6;
+}
+
+article h2 {
+  text-align: left;
+  font-family: "wonder", sans-serif;
+  margin-top: 1vh;
+}
+
+
+/* detail pagina */
+
+#column2 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#column2 article {
+  background-color: #73cd72;
+  padding: 1em 4em;
+  margin: 2em 2em;
+  box-shadow: inset 0 0 13px 7px #000;
+
+}
+
+article h3 {
+  color: white;
+  font-family: "wonder", sans-serif;
+  font-size: 7pt;
+
+}
+
+#column2 p:last-child {
+  color: black;
+  font-family: "roboto";
+}
+
+iframe {
+  height: 60vh;
+  width: 100%;
+}
+
+
+
+
+
+
+footer {
+  background: #0026cc;
+  padding: 3vh;
+  box-shadow: inset 0px 9px 12px -3px #000
+}
+
+footer > ul {
+  /* bron: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+footer > ul li {
+  margin-left: 4vw;
+}
+
+
+
+
+
+
+/* MEDIA */
+
+
+
+
+@media (min-width: 700px) {
+
+  ul {
+    list-style: none;
+    /* bron: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* bron: Max Hauser ⬇︎*/
+    overflow-x: scroll;
+    margin-top: 1em;
+    padding: 0;
+    margin-left: -5vw;
+
+  }
+
+  a {
+    margin: 2rem;
+  }
+
+  nav ul li img {
+    width: 3vw;
+    height: auto;
+
+  }
+
+  main > video {
+    margin-top: 0;
+  }
+
+  form input + label {
+    padding: 1em;
+    background-color: #73cd72;
+    font-family: "wonder";
+    font-size: 8pt;
+  }
+
+  #column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+  #column article {
+    margin: 2em 1em;
+  }
+
+  #column2 {
+    display: grid;
+    grid-template-columns: 1fr;
+
+  }
+
+  #column2 article {
+    margin: 3em 10em;
+  }
+
+  .icoon {
+    width: 8%;
+
+  }
+
+  .icoon_muziek {
+    width: 9%;
+    margin-top: 3vh;
+  }
+
+  article h2 {
+    font-size: 15pt;
+  }
+
+  article h3 {
+    font-size: 7pt;
+  }
+
+  article p {
+    margin-top: 3vh;
+  }
+
+  header {
+    position: fixed;
+  }
+
+  section p {
+    font-size: 8pt;
+    margin-bottom: 3vh;
+    margin-top: 2vh;
+  }
+
+
+}
+
+@media (min-width: 1200px) {
+
+  ul {
+    list-style: none;
+    /* bron: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* bron: Max Hauser ⬇︎*/
+    overflow-x: scroll;
+    margin-top: 2em;
+    padding: 0;
+    margin-left: -3vw;
+
+  }
+
+  main > video {
+    margin-top: 0;
+  }
+
+  form input + label {
+    padding: 1em;
+    background-color: #73cd72;
+    font-family: "wonder";
+    font-size: 8pt;
+  }
+
+  a {
+    margin: 1rem;
+  }
+
+  nav ul li img {
+    width: 2vw;
+    height: auto;
+    margin-top: -1vh;
+
+  }
+
+  #column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+  }
+
+  #column article {
+    margin: 3em 6em;
+  }
+
+  #column2 {
+    display: grid;
+    grid-template-columns: 1fr;
+
+  }
+
+  #column2 article {
+    margin: 3em 23em;
+  }
+
+
+  .icoon {
+    width: 6%;
+    margin-top: 3vh;
+  }
+
+  .icoon_muziek {
+    width: 7%;
+    margin-top: 3vh;
+  }
+
+  article h2 {
+    font-size: 18pt;
+  }
+
+  article h3 {
+    font-size: 10pt;
+  }
+
+  article p {
+    margin-top: 3vh;
+  }
+
+
+
+  section p {
+    font-size: 8pt;
+
+  }
+
+  header {
+    position: fixed;
+  }
+
